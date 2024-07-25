@@ -1,0 +1,306 @@
+/*!========== common use css ==========*/
+
+@font-face {
+  font-family: "poppins";
+  src: url(./Poppins-Regular.ttf);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  scroll-behavior: smooth;
+  font-family: "poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main-container,
+.header {
+  max-width: 1440px;
+}
+
+.main-container {
+  margin-top: 7rem;
+}
+
+/*!========== website theme ==========*/
+
+:root {
+  --mainColor1: #085078;
+  --mainColor2: #85d8ce;
+  --bg-gradient: linear-gradient(
+    to bottom right,
+    var(--mainColor2),
+    var(--mainColor1)
+  );
+  --textColor: ;
+  --black: #000;
+  --white: #fff;
+}
+
+/*!========== ReuseAble Code ==========*/
+
+/*todo===== all flex properties =====*/
+
+.d-flex {
+  display: flex;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+/*?=== justify content properties ===*/
+
+.jc-center {
+  justify-content: center;
+}
+.jc-start {
+  justify-content: start;
+}
+.jc-end {
+  justify-content: end;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-evenly {
+  justify-content: space-evenly;
+}
+.jc-around {
+  justify-content: space-around;
+}
+
+/*?=== aling items properties ===*/
+
+.al-center {
+  align-items: center;
+}
+.al-start {
+  align-items: start;
+}
+.al-end {
+  align-items: end;
+}
+
+/*?=== flex directions properties ===*/
+
+.dir-col {
+  flex-direction: column;
+}
+.dir-col-reverse {
+  flex-direction: column-reverse;
+}
+
+/*todo===== all grid properties =====*/
+
+.grid {
+  display: grid;
+}
+
+/*?=== template columns properties ===*/
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*?=== justify items properties ===*/
+
+.ji-center {
+  justify-items: center;
+}
+.ji-start {
+  justify-items: start;
+}
+.ji-end {
+  justify-items: end;
+}
+
+/*todo===== all txt properties =====*/
+
+.txt-up {
+  text-transform: uppercase;
+}
+.txt-low {
+  text-transform: lowercase;
+}
+.txt-cap {
+  text-transform: capitalize;
+}
+.txt-center {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+
+/*todo===== all position properties =====*/
+
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  content: "";
+  position: absolute;
+}
+.p-fixed {
+  content: "";
+  position: fixed;
+}
+
+/*todo===== all other properties =====*/
+
+.d-none {
+  display: none;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.m-auto {
+  margin: auto;
+}
+.pointer {
+  cursor: pointer;
+}
+.border-none {
+  border: none;
+}
+.radius-50per {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.transition-3ms {
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.btn {
+  border: none;
+  outline: none;
+}
+
+.opacity0 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*!=============== BODY STYLNG ===============*/
+body {
+  background: linear-gradient(to bottom right, rgb(61, 60, 60), black);
+  height: 100vh;
+}
+
+/*!=============== WEATHER APP STYLING ===============*/
+.weatherContainer {
+  background: var(--bg-gradient);
+  width: 500px;
+  height: 610px;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+/*todo===== WEATHER SEARCH BAR =====*/
+.weatherSearchBar {
+  margin: 3rem 0;
+  gap: 1.5rem;
+}
+#searchBar,
+.searchIcon {
+  color: rgb(155, 153, 153);
+}
+
+#searchBar {
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  width: 70%;
+}
+label > .searchIcon {
+  background-color: white;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.6rem;
+}
+/*todo===== WEATHER CONDITIONS =====*/
+.weatherConditions {
+  margin-bottom: 2rem;
+  width: 20rem;
+}
+.conditionImg {
+  min-width: 100%;
+  height: 20rem;
+}
+.conditionName {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+/*todo===== WEATHER TEMPRATURE =====*/
+.weatherTemprature,
+.cityName {
+  line-height: 40px;
+}
+.weatherTemprature {
+  font-size: 6rem;
+  margin: 2rem 0;
+}
+.weatherTemprature > .nameOfTemprature {
+  font-size: 1.3rem;
+}
+/*todo===== WEATHER TEMPRATURE =====*/
+.cityName {
+  font-size: 4rem;
+}
+/*todo===== ADDITIONAL CONDITIONS =====*/
+
+.aditionalDetails {
+  margin-top: 2rem;
+}
+.windContainer,
+.humidityContainer {
+  flex: 1 1 50%;
+}
+.humidityContent,
+.windContent {
+  font-size: 3.5rem;
+  gap: 1rem;
+}
+
+.humidityName,
+.windName {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--!== facicon link ===-->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/Logo.png"
+      type="image/x-icon"
+    />
+    <!--!== font awesome cdn ===-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      ,
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--!== style sheets ===-->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/responsive.css" />
+    <title>weather app</title>
+  </head>
+  <body>
+    <div class="main-container m-auto h-100 d-flex jc-center al-center">
+      <div class="weatherContainer h-100">
+        <!--todo=== WEATHER DISPLAY ===-->
+        <div
+          class="weatherDisplay weatherSection d-flex jc-center al-center dir-col w-100"
+        >
+          <!--?=== SEARCH BAR ===-->
+          <div class="weatherSearchBar d-flex al-center jc-center w-100">
+            <input
+              onkeypress="triggerSearchOnEnter(event)"
+              id="searchBar"
+              type="search"
+              name="searchBar"
+              class="border-none"
+              placeholder="Enter city name"
+            />
+            <label for="searchBar radius-50per"
+              ><i
+                class="fa-solid fa-magnifying-glass searchIcon radius-50per d-flex jc-center al-center"
+              ></i
+            ></label>
+          </div>
+          <!--?=== WEATHER CONDITION ===-->
+          <div class="weatherConditions d-flex w-100 transition3ms">
+            <!--!=== IMG 1 ===-->
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/clear.webp"
+                alt=""
+              />
+            </div>
+            <!--!=== IMG 2 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Cloudy.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 3 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Drizzle.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 4 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Dust.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 5 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Fog.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 6 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/FreezingRain.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 7 ===-->
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Haze.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 8 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Heavy Rain.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 9 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Heavy Snow.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 10 ===-->
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Light Rain.png"
+                alt=""
+              />
+            </div>
+            <!--!=== IMG 11 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Light Snow.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 12 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Mist.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 13 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Partly Cloudy.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 14 ===-->
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Sleet.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 15 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Smoke.webp"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 16 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Snow.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 17 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Thunderstorm.png"
+                alt=""
+              />
+            </div>
+
+            <!--!=== IMG 18 ===-->
+
+            <div class="conditionImg opacity0 transition3ms">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/weatherConditions/Tornado.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="conditionName white bold">heavy rain</div>
+          <!--?=== WEATHER TEMPRATURE ===-->
+          <div
+            class="weatherTemprature d-flex jc-center dir-col al-center white"
+          >
+            <div class="temprature">0°C</div>
+            <div class="nameOfTemprature">temprature</div>
+          </div>
+          <!--?=== CITY NAME ===-->
+          <div class="cityName d-flex jc-center al-center white">karachi</div>
+
+          <!--?=== ADDITIONAL CONDITIONS ===-->
+          <div class="aditionalDetails w-100 d-flex jc-center al-center white">
+            <!--!== HUMIDITY ===-->
+            <div
+              class="humidityContainer w-100 d-flex dir-col jc-center al-center"
+            >
+              <!--?=== ICON  ===-->
+              <div class="humidityContent d-flex jc-center al-center">
+                <i class="fa-solid fa-water"></i>
+
+                <div class="humidityLevel">100%</div>
+              </div>
+              <!--?=== TEXT ===-->
+              <div class="humidityName">humidity</div>
+            </div>
+            <!--!== WIND SPEED ===-->
+            <div class="windContainer w-100 d-flex dir-col jc-center al-center">
+              <!--?=== ICON ===-->
+              <div class="windContent d-flex jc-center al-center">
+                <i class="fa-solid fa-wind"></i>
+                <div class="windLevel">1.86 km/h</div>
+              </div>
+              <!--?=== TEXT ===-->
+              <div class="windName">wind speed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--!========== JavaScript section ==========-->
+    <script src="./assets/app.js"></script>
+  </body>
+</html>

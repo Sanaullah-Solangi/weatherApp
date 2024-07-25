@@ -1,0 +1,14 @@
+@media (width <=500px) {
+  .weatherContainer {
+    width: 95%;
+  }
+  .humidityContent,
+  .windContent {
+    font-size: 2.5rem;
+  }
+
+  .humidityName,
+  .windName {
+    font-size: 1.5rem;
+  }
+}
